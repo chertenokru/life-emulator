@@ -22,7 +22,7 @@ public class Map extends JTable{
       for (int i = 0; i<mapSize;i++)
           for (int j = 0; j<mapSize;j++)
           {
-            setValueAt(0x000,j,i);
+            setValueAt((Object)0x000,j,i);
           }
 
         generateLandscape();
