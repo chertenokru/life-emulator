@@ -12,6 +12,7 @@ public class Map extends JTable {
     private int mapSize = 129;
     private int cellSize = 5;
 
+<<<<<<< HEAD
     public Map() {
         setModel(new DefaultTableModel(this.mapSize, this.mapSize));
         setRowHeight(this.cellSize);
@@ -23,6 +24,20 @@ public class Map extends JTable {
             for (int j = 0; j < mapSize; j++) {
                 setValueAt(0x000, j, i);
             }
+=======
+    public Map(){
+      setModel(new DefaultTableModel(this.mapSize,this.mapSize));
+      setRowHeight(this.cellSize);
+      for (int i = 0; i < this.mapSize; i++){
+          getColumnModel().getColumn(i).setMinWidth(this.cellSize);
+          getColumnModel().getColumn(i).setMaxWidth(this.cellSize);
+      }
+      for (int i = 0; i<mapSize;i++)
+          for (int j = 0; j<mapSize;j++)
+          {
+            setValueAt((Object)0x000,j,i);
+          }
+>>>>>>> origin/master
 
         generateLandscape();
 
